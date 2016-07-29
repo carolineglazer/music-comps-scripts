@@ -1,3 +1,6 @@
+#Author: Caroline Glazer
+#Date: July 2016
+
 from music21 import *
 import os
 import re
