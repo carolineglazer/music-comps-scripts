@@ -21,7 +21,7 @@ for f in sorted(os.listdir('../sources/music/')):
         peggy.metadata.location = input("location: ")
         peggy.metadata.year = input("year: ")        
         peggy.metadata.orig_key = key
-        peggy.metadata.meter = thisScore.recurse().getElementsByClass(meter.TimeSignature)[0]
+        peggy.metadata.meter = peggy.recurse().getElementsByClass(meter.TimeSignature)[0]
         
         #overwrite xml files with metadata-y version
         outfile = '../sources/music/'+f
