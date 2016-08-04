@@ -12,11 +12,7 @@ for f in sorted(os.listdir('../sources/music/')):
         key = str(peggy.analyze('key'))
         print(f)
 
-        #add a metadata object to peggy score
-        #peggy.insert(0,metadata.Metadata())
-        
         #add stuff to the metadata object
-        peggy.show('text')
         peggy.metadata.localeOfComposition = input("location: ")
         peggy.metadata.date = input("year: ")        
         peggy.metadata.number = key
