@@ -16,10 +16,6 @@ for f in sorted(os.listdir('../sources/music/')):
         peggy.insert(0,metadata.Metadata())
         
         #add stuff to the metadata object
-        peggy.metadata.opusNumber = f
-        print(peggy.metadata.all())
-        peggy.metadata.title = input("title: ")
-        print(peggy.metadata.all())
         peggy.metadata.localeOfComposition = input("location: ")
         print(peggy.metadata.all())
         peggy.metadata.date = input("year: ")        
