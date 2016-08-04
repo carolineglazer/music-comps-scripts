@@ -1,5 +1,5 @@
 #Author: Caroline Glazer
-#Date: July 2016
+#Date: July-August 2016
 
 from music21 import *
 import os
@@ -17,11 +17,8 @@ for f in sorted(os.listdir('../sources/music/')):
         
         #add stuff to the metadata object
         peggy.metadata.localeOfComposition = input("location: ")
-        print(peggy.metadata.all())
         peggy.metadata.date = input("year: ")        
-        print(peggy.metadata.all())
         peggy.metadata.number = key
-        print(peggy.metadata.all())
         
         #overwrite xml files with metadata-y version
         outfile = '../sources/music/'+f
