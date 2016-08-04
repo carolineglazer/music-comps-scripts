@@ -16,12 +16,16 @@ for f in sorted(os.listdir('../sources/music/')):
         peggy.insert(0,metadata.Metadata())
         
         #add stuff to the metadata object
-        peggy.metadata.number = f
+        peggy.metadata.opusNumber = f
+        print(peggy.metadata.all())
         peggy.metadata.title = input("title: ")
-        peggy.metadata.location = input("location: ")
-        peggy.metadata.year = input("year: ")        
-        peggy.metadata.orig_key = key
-        peggy.metadata.meter = peggy.recurse().getElementsByClass(meter.TimeSignature)[0]
+        print(peggy.metadata.all())
+        peggy.metadata.localeOfComposition = input("location: ")
+        print(peggy.metadata.all())
+        peggy.metadata.date = input("year: ")        
+        print(peggy.metadata.all())
+        peggy.metadata.number = key
+        print(peggy.metadata.all())
         
         #overwrite xml files with metadata-y version
         outfile = '../sources/music/'+f
