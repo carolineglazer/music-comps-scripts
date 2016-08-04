@@ -19,17 +19,3 @@ for f in sorted(os.listdir('../sources/music/')):
         peggy.metadata.date = input("year: ")        
         
         print(peggy.metadata.all())
-
-
-#################################
-'''
-for i in peggy[2].measures(0,len(peggy[2])):
-    print(i.offset)
-    pitches = {}
-    for thing in i.getElementsByClass('Note'):
-        pitches[thing.pitch] = thing.offset
-    for k,v in pitches.items():
-        print(k,v)
-'''
-
-
