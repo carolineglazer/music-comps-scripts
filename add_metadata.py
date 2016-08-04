@@ -15,7 +15,10 @@ for f in sorted(os.listdir('../sources/music/')):
         peggy.metadata.alternativeTitle = input("title: ")
         peggy.metadata.localeOfComposition = input("location: ")
         peggy.metadata.number = key
-        peggy.metadata.opusNumber = input("meter: ")
         peggy.metadata.date = input("year: ")        
         
         print(peggy.metadata.all())
+
+        #overwrite xml files with metadata-y version
+        outfile = '../sources/music/'+f
+        peggy.write(fmt='xml', fp=outfile)
