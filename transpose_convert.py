@@ -37,7 +37,6 @@ for f in sorted(os.listdir('../sources/music/')):
             
         #write a new xml file with the same name to .../music/xml_same_key
         outfile = '../sources/music/xml_same_key/'+re.search('.*(?=.xml)', f).group()+'.xml'
-        #if outfile not in os.listdir('../sources/music/xml_same_key/'):
         peggy2.write(fmt='xml', fp=outfile)
 
 
