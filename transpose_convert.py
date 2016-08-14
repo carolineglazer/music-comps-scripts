@@ -39,17 +39,3 @@ for f in sorted(os.listdir('../sources/music/')):
         outfile = '../sources/music/xml_same_key/'+re.search('.*(?=.xml)', f).group()+'.xml'
         peggy2.write(fmt='xml', fp=outfile)
 
-
-
-#################################
-'''
-for i in peggy[2].measures(0,len(peggy[2])):
-    print(i.offset)
-    pitches = {}
-    for thing in i.getElementsByClass('Note'):
-        pitches[thing.pitch] = thing.offset
-    for k,v in pitches.items():
-        print(k,v)
-'''
-
-
